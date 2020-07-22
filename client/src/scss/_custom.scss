@@ -1,0 +1,41 @@
+// Here you can add other styles
+.custombadge .badge{
+    font-size: 12px;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    border-radius: 21px;
+    color: #fff;
+}
+.action-box{
+    width: 180px;
+}
+
+.btn_action.btn-pill{
+    font-size: 12px;
+    // padding: 8px;
+    width: 80px;
+    text-align: center;
+    border-radius: 21px;
+    color: #fff;
+}
+.btn_action{
+ margin-right: 10px;
+}
+.comment_break{
+    word-break: break-all;
+}
+.time_slot{
+    width: 90px;
+    text-align: center;
+}
+.table thead th{
+    text-align: left;
+}
+.table thead td{
+    text-align: left;
+}
+.taskFormWrapper{
+    max-width: 800px;
+    margin: 0 auto;
+}
