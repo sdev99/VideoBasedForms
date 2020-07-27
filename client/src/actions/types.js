@@ -1,8 +1,0 @@
-export const ADD_TASK = 'ADD_TASK';
-export const DELETE_TASK = 'DELETE_TASK';
-
-export const FETCH_TASK = 'FETCH_TASK';
-export const UPDATE_TASK = 'UPDATE_TASK';
-export const UPDATE_TASK_TIME = 'UPDATE_TASK_TIME';
-export const UPDATE_TASK_TIMER_STATUS = 'UPDATE_TASK_TIMER_STATUS';
-export const FETCH_REPORT = 'FETCH_REPORT';

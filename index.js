@@ -9,7 +9,7 @@ const path = require("path");
 const app = express();
 const router = express.Router();
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 const dbRoute =  "mongodb://oliverdbuser:vWK482DYG9@ds155076.mlab.com:55076/heroku_v5mvh32q?retryWrites=true";
 
@@ -87,7 +87,7 @@ router.post("/updateData", (req, res) => {
     background_color:background_color,
     total_time: total_time ? total_time: 0,
     currency: currency
-    
+
   }
   Data.findOneAndUpdate({_id: _id}, update, {rawResult: true},(err, response ) => {
     if (err) return res.json({ success: false, error: err });
@@ -150,13 +150,13 @@ router.delete("/deleteData", (req, res) => {
   const { _id } = req.body;
   Data.findOneAndDelete({_id:_id}, err => {
       if (err) return res.send(err);
-      
+
       Sequence.deleteMany({task_id: _id }, err => {
               if (err) return res.send(err);
       });
       return res.json({ success: true, _id: _id });
   });
-  
+
 });
 /**
  * Function to delete all sequences, commented for now.
@@ -211,7 +211,7 @@ router.post("/putSequence", (req, res) => {
   sequence.total_time = total_time;
   sequence.seq_time = seq_time;
   sequence.task_status = task_status;
-  
+
   sequence.save( (err, response) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true, data: response });
